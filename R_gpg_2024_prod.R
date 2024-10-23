@@ -1,4 +1,6 @@
 
+############# this is a working version, not optimised, some functions need to be defined and the whole code needs to be streamlined ###########
+
 ## Main packages - loading -----------------
 
 library(tidyverse)
@@ -34,8 +36,8 @@ library(ggeffects)
 ### ------------Get data -------------------------------------------------------
 
 ### on windows ---------------------------
-dbhandle <- RODBC::odbcDriverConnect('driver={SQL Server};server=zeus;database=adferdir;trusted_connection=true')
-micro <- RODBC::sqlQuery(dbhandle, "SELECT * from dbo.gpg2024")
+dbhandle <- RODBC::odbcDriverConnect('driver={SQL Server};server=ZZZZ;database=XXXXX;trusted_connection=true')
+micro <- RODBC::sqlQuery(dbhandle, "SELECT * from TTTTT")
 
 
 
@@ -500,7 +502,7 @@ result_gap_econSect_time
 
 
 ### save it into database adferdir as a table
-## dbhandle <- RODBC::odbcDriverConnect('driver={SQL Server};server=zeus;database=adferdir;trusted_connection=true')
+## dbhandle <- RODBC::odbcDriverConnect('driver={SQL Server};server=ZZZZ;database=XXXXX;trusted_connection=true')
 ## RODBC::sqlSave(dbhandle, result_gap_econSect_time)
 
 ## or/and
